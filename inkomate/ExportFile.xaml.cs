@@ -113,8 +113,8 @@ namespace inkomate
                     }
 
                     using (var stream = File.Open(path, FileMode.Append))
-                    using (var writer = new StreamWriter(stream))
-                    using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
+                    using (var writer = new StreamWriter(stream, Encoding.UTF8))
+                    using (var csv = new CsvWriter(writer, CultureInfo.CurrentCulture))
                     {
                         csv.WriteRecords(exportables);
                     }
