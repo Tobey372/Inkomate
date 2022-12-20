@@ -1,0 +1,55 @@
+﻿<Window x:Class="inkomate.ShowProducts"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:inkomate"
+        mc:Ignorable="d"
+        Title="Inkontinenzprodukte bearbeiten" Height="450" Width="993">
+    <Grid>
+        <ListView x:Name="listViewProducts" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="340,0,0,0">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Name" Width="220">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock  Text="{Binding Name}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Anzahl pro Packung" Width="140">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock  Text="{Binding Amount}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Preis pro Stück" Width="100">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock  Text="{Binding Price}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Gesamtpreis" Width="100">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock  Text="{Binding PackagePrice}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="buttonEditProduct" Content="Inkontinezprodukt bearbeiten" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top" Height="34" Width="325"/>
+        <TextBox x:Name="textBoxAmount" HorizontalAlignment="Left" Margin="142,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="193" Height="33"/>
+        <Label x:Name="labelAmount" Content="Anzahl pro Packung: " HorizontalAlignment="Left" Margin="10,127,0,0" VerticalAlignment="Top" Height="33" Width="127"/>
+        <TextBox x:Name="textBoxName" HorizontalAlignment="Left" Margin="142,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="193" Height="33"/>
+        <Label x:Name="labelName" Content="Name:" HorizontalAlignment="Left" Margin="10,89,0,0" VerticalAlignment="Top" Height="33" Width="127"/>
+        <TextBox x:Name="textBoxPrice" HorizontalAlignment="Left" Margin="142,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="193" Height="33"/>
+        <Label x:Name="labelPrice" Content="Preis pro Stück:" HorizontalAlignment="Left" Margin="10,165,0,0" VerticalAlignment="Top" Height="33" Width="127"/>
+        <Button x:Name="buttonDeleteProduct" Content="Inkontienzprodukt löschen" HorizontalAlignment="Left" Margin="10,360,0,0" VerticalAlignment="Top" Height="34" Width="325"/>
+        <Button x:Name="buttonAddProduct" Content="Neues Inkontienzprodukt hinzufügen" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="34" Width="325"/>
+
+    </Grid>
+</Window>

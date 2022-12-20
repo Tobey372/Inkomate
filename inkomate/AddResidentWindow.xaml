@@ -1,0 +1,67 @@
+﻿<Window x:Class="inkomate.AddResidentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:inkomate"
+        mc:Ignorable="d"
+        Title="Neuen Bewohner hinzufügen" Height="549" Width="800">
+    <Grid Margin="0,0,0,-6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="buttonAddResident" Content="Bewohner hinzufügen" HorizontalAlignment="Left" Margin="116,418,0,0" VerticalAlignment="Top" Height="34" Width="260" Background="#FFDDDDDD"/>
+        <TextBox x:Name="textboxFirstName" HorizontalAlignment="Left" Margin="116,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="260" Height="34" VerticalContentAlignment="Center"/>
+        <Label x:Name="labelFirstName" Content="Vorname: " HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="34" VerticalContentAlignment="Center" Width="67"/>
+        <TextBox x:Name="textBoxLastName" HorizontalAlignment="Left" Margin="116,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="260" Height="34" VerticalContentAlignment="Center"/>
+        <Label x:Name="labelSecondName" Content="Nachname: " HorizontalAlignment="Left" Margin="10,49,0,0" VerticalAlignment="Top" Height="34" VerticalContentAlignment="Center" Width="69"/>
+        <TextBox x:Name="textBoxSSN" HorizontalAlignment="Left" Margin="116,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="260" Height="34" VerticalContentAlignment="Center" MaxLength="10"/>
+        <Label x:Name="labelSSN" Content="SVN: " HorizontalAlignment="Left" Margin="10,88,0,0" VerticalAlignment="Top" Height="34" VerticalContentAlignment="Center" Width="38"/>
+        <ComboBox x:Name="comboBoxFloor" HorizontalAlignment="Left" Margin="116,127,0,0" VerticalAlignment="Top" Width="260" Height="34" VerticalContentAlignment="Center"/>
+        <Label x:Name="labelBirthDate" Content="Geburtstag: " HorizontalAlignment="Left" Margin="10,170,0,0" VerticalAlignment="Top" Height="34" VerticalContentAlignment="Center" Width="79"/>
+        <DatePicker x:Name="datePickerBirthDate" HorizontalAlignment="Left" Margin="116,170,0,0" VerticalAlignment="Top" Height="34" VerticalContentAlignment="Center" Width="260" FirstDayOfWeek="Monday"/>
+        <Label x:Name="labelEntryDate" Content="Eintrittsdatum: " HorizontalAlignment="Left" Margin="10,209,0,0" VerticalAlignment="Top" Height="34" VerticalContentAlignment="Center" Width="87"/>
+        <DatePicker x:Name="datePickerEntryDate" HorizontalAlignment="Left" Margin="116,209,0,0" VerticalAlignment="Top" Height="34" VerticalContentAlignment="Center" Width="260" FirstDayOfWeek="Monday"/>
+        <Label x:Name="labelExitDate" Content="Austrittsdatum: " HorizontalAlignment="Left" Margin="10,248,0,0" VerticalAlignment="Top" Height="34" VerticalContentAlignment="Center" Width="92"/>
+        <DatePicker x:Name="datePickerExitDate" HorizontalAlignment="Left" Margin="116,248,0,0" VerticalAlignment="Top" Height="34" VerticalContentAlignment="Center" Width="260" FirstDayOfWeek="Monday"/>
+        <Image x:Name="imageResidentPreview" HorizontalAlignment="Left" Height="329" Margin="459,49,0,0" VerticalAlignment="Top" Width="264" Stretch="Uniform"/>
+        <Button x:Name="buttonSelectImage" Content="Bild auswählen" HorizontalAlignment="Left" Margin="116,287,0,0" VerticalAlignment="Top" Height="34" Width="260" HorizontalContentAlignment="Left"/>
+        <Label x:Name="labelImage" Content="Bild: " HorizontalAlignment="Left" Margin="10,287,0,0" VerticalAlignment="Top" Height="34" VerticalContentAlignment="Center" Width="46"/>
+        <ListView x:Name="listViewInsurances" d:ItemsSource="{d:SampleData ItemCount=3}" Margin="116,326,0,0" ScrollViewer.VerticalScrollBarVisibility="Auto" VerticalAlignment="Top" HorizontalAlignment="Left" Width="260" Height="87">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Versicherung" Width="60">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock  Text="{Binding Name}" IsEnabled="False"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Intervall" Width="60">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock  Text="{Binding Interval}" IsEnabled="False"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Ausgewählt" Width="60">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <CheckBox  IsChecked="{Binding Selected}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Primär" Width="60">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <CheckBox  IsChecked="{Binding Primary}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label x:Name="labelFloor" Content="Stockwerk: " HorizontalAlignment="Left" Margin="12,127,0,0" VerticalAlignment="Top" Height="34" VerticalContentAlignment="Center" Width="85"/>
+
+    </Grid>
+</Window>

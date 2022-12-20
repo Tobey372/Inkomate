@@ -1,0 +1,24 @@
+﻿<Window x:Class="inkomate.ExportFile"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:inkomate"
+        mc:Ignorable="d"
+        Title="CSV Datei exportieren" Height="245" Width="704">
+    <Grid>
+        <Button x:Name="buttonExportCSV" Content="CSV Datei exportieren " HorizontalAlignment="Left" Margin="14,132,0,0" VerticalAlignment="Top" Height="34" Width="364" Background="#FFDDDDDD"/>
+        <TextBox x:Name="textBoxAllowance" HorizontalAlignment="Left" Margin="118,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="260" Height="34" VerticalContentAlignment="Center"/>
+        <Label x:Name="labelAllowance" Content="Pauschale: " HorizontalAlignment="Left" Margin="12,10,0,0" VerticalAlignment="Top" Height="34" VerticalContentAlignment="Center" Width="101"/>
+        <Label x:Name="labelInsurance" Content="Versicherung: " HorizontalAlignment="Left" Margin="10,88,0,0" VerticalAlignment="Top" Height="34" VerticalContentAlignment="Center" Width="99"/>
+        <ComboBox x:Name="comboBoxInsurance" HorizontalAlignment="Left" Margin="118,88,0,0" VerticalAlignment="Top" Width="260" Height="34"/>
+        <Button x:Name="buttonSetAllowanceValue" Content="Neuen Pauschalwert setzen" HorizontalAlignment="Left" Margin="383,10,0,0" VerticalAlignment="Top" Height="34" Width="273" Background="#FFDDDDDD"/>
+        <TextBox x:Name="textBoxFileName" HorizontalAlignment="Left" Margin="118,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="260" Height="34" VerticalContentAlignment="Center"/>
+        <Label x:Name="labelFileName" Content="Dateiname: " HorizontalAlignment="Left" Margin="10,49,0,0" VerticalAlignment="Top" Height="34" VerticalContentAlignment="Center" Width="101"/>
+        <TextBox x:Name="textBoxTotalAllowance" HorizontalAlignment="Left" Margin="500,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156" Height="34" VerticalContentAlignment="Center" IsEnabled="False"/>
+        <Label x:Name="labelFileName_Copy" Content="Max-Wert:" HorizontalAlignment="Left" Margin="383,49,0,0" VerticalAlignment="Top" Height="34" VerticalContentAlignment="Center" Width="112"/>
+        <TextBox x:Name="textBoxCurrentAllowance" HorizontalAlignment="Left" Margin="500,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156" Height="34" VerticalContentAlignment="Center" IsEnabled="False"/>
+        <Label x:Name="labelFileName_Copy1" Content="Ist-Wert: " HorizontalAlignment="Left" Margin="383,88,0,0" VerticalAlignment="Top" Height="34" VerticalContentAlignment="Center" Width="112"/>
+
+    </Grid>
+</Window>

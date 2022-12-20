@@ -1,0 +1,59 @@
+﻿<Window x:Class="inkomate.AddProductToResident"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:inkomate"
+        mc:Ignorable="d"
+        Title="Hinzufügen / bearbeiten / löschen der Inkontinenzprodukte von Bewohner" Height="393" Width="910">
+    <Grid>
+        <ListView x:Name="listViewProducts" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="224,0,0,0">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Name" Width="220">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock  Text="{Binding Name}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Bestellte Anzahl" Width="100">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock  Text="{Binding TotalAmount}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Preis insgesamt" Width="100">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock  Text="{Binding TotalPrice}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="MWST 9.5%" Width="100">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock  Text="{Binding TaxOfPrice}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Preis + MWST" Width="100">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock  Text="{Binding PriceWithTax}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="buttonAddProductToResident" Content="Inkontinenzprodukt hinzufügen" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="34" Width="209"/>
+        <ComboBox x:Name="comboBoxProducts" HorizontalAlignment="Left" Margin="10,49,0,0" VerticalAlignment="Top" Width="209" Height="33" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="textBoxAmount" HorizontalAlignment="Left" Margin="72,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147" Height="33" VerticalContentAlignment="Center"/>
+        <Label x:Name="labelAmount" Content="Anzahl: " HorizontalAlignment="Left" Margin="10,87,0,0" VerticalAlignment="Top" Height="33" Width="62" VerticalContentAlignment="Center"/>
+        <Button x:Name="buttonEditProductOfResident" Content="Anzahl ändern" HorizontalAlignment="Left" Margin="10,212,0,0" VerticalAlignment="Top" Height="34" Width="209"/>
+        <Button x:Name="buttonDeleteProductOfResident" Content="Inkontinenzprodukt entfernen" HorizontalAlignment="Left" Margin="10,251,0,0" VerticalAlignment="Top" Height="34" Width="209"/>
+
+    </Grid>
+</Window>
