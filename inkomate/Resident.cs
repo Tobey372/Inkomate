@@ -284,7 +284,7 @@ namespace inkomate
 
             public DatabaseHandler()
             {
-                ConnectionString = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "../inkomate.sqlite");
+                ConnectionString = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "../../../inkomate.sqlite");
 
             }
 
