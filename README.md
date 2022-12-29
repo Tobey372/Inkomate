@@ -1,8 +1,10 @@
 # inkomate
 
-## .NET C# program to mange incontinence aids of residents of nursing homes
+## .NET C# program to manage incontinence aids of residents of nursing homes
 
-### v0.9.x - working
+## Expect first full release (v1.0.0) in February ~ March
+
+### v0.9.x - working 
 
 Improvemnts have been made, making this program almost ready for its first major release. All currently implemented functions have been working without bugs during testing - however, since this program is not fully released  yet, expect it to break rare occasions. 
 
@@ -13,13 +15,19 @@ Improvemnts have been made, making this program almost ready for its first major
 - Remove generic allowance value - make it per insurance
 - Add functions for insurances (add, remove, update etc.)
 - Comment & explain code
-- Creating MSI file 
+- Creating installer
 - Reducing redundant code (e.g. database-handler)
+- SQL server / MySQL compatibility
+- Select location of SQLite file
 
 ### Problems
 
 - ~~Depending on the system language the final .csv file might include wrongly formated text or delimiter in other languages~~
-- MSI file is unusable (even of older versions prior to v0.9.X)
+
+### Dev problems
+
+- Fix VS property file
+- SQLite NuGet packages break if solution is built for the first time (reinstall these packages fixes this problem)
 
 ### Database
 
