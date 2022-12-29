@@ -1,8 +1,8 @@
-# inkomate
+# Inkomate
 
 ## .NET C# program to manage incontinence aids of residents of nursing homes
 
-### Expect first full release (v1.0.0) in February ~ March
+### *Expect first full release (v1.0.0) in January ~ February*
 
 ### v0.9.x - working 
 
@@ -10,15 +10,17 @@ Improvemnts have been made, making this program almost ready for its first major
 
 ### ToDo
 
-- Add English support
-- Code clean-up
-- Remove generic allowance value - make it per insurance
-- Add functions for insurances (add, remove, update etc.)
+- Add English support \*
+- Code clean-up \*
+- Remove generic allowance value - make it per insurance \*
+- Add functions for insurances (add, remove, update etc.) \*
 - Comment & explain code
 - Creating installer
-- Reducing redundant code (e.g. database-handler)
+- Reducing redundant code (e.g. database-handler) \*
 - SQL server / MySQL compatibility
-- Select location of SQLite file
+- Select location of SQLite file \*
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *\* mandatory for full release*
 
 ### Problems
 
@@ -31,7 +33,7 @@ Improvemnts have been made, making this program almost ready for its first major
 
 ### Database
 
-This project uses a SQLite database. An associated SQL file is provided in order to create the tables of this database. The database file must be named "inkomate.sqlite" and must reside within the same directory as the executable. 
+This project uses a SQLite database. An associated SQL file is provided in order to create the tables of this database. The database file must be named "inkomate.sqlite" and must reside 3 folders above executable. This can be changed in code however 
 
 ### Patch notes
 
