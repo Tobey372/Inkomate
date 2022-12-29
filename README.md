@@ -2,7 +2,7 @@
 
 ## .NET C# program to manage incontinence aids of residents of nursing homes
 
-## Expect first full release (v1.0.0) in February ~ March
+### Expect first full release (v1.0.0) in February ~ March
 
 ### v0.9.x - working 
 
