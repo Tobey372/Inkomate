@@ -18,8 +18,8 @@ Improvemnts have been made, making this program almost ready for its first major
 
 ### Problems
 
-- Depending on the system language the final .csv file might include wrongly formated text or delimiter in other languages
-- MSI file is unusable (even of older versions prio to v0.9.X)
+- ~~Depending on the system language the final .csv file might include wrongly formated text or delimiter in other languages~~
+- MSI file is unusable (even of older versions prior to v0.9.X)
 
 ### Database
 
@@ -31,3 +31,4 @@ This project uses a SQLite database. An associated SQL file is provided in order
 - Added search function
 - Improved sorting function
 - Added QOF features (e.g. displaying the count of current residents)
+- Fixed .csv cultural problems
